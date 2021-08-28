@@ -1,11 +1,12 @@
 print('Hello World!')
 
 x = 1
-y=int(input("Input number to count to:  "))
+y=5
 
 while x < y:
     x+=1
     print(x)
 
 print('Thanks that worked!')
-print('tests')
+print('Is this a great test?')
+print('Robert')
