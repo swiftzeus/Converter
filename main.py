@@ -8,7 +8,4 @@ while x < y:
     print(x)
 
 print('Thanks that worked!')
-print('Is this a great test?')
-print('Robert, is it working yet?')
-print('no not yet')
-print('yes almost')
+print('I think this is almost done')
