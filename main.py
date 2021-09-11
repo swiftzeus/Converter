@@ -36,11 +36,11 @@ G = 6.674 * 10 ** -11
 
 while m1.isdigit() == False:
     m1 = float(input('What is the mass of the first object in kilograms? '))
-return int(m1)
+    return int(m1)
 
 while m2.isdigit() == False:
     m2 = float(input('What is the mass of the second object in kilograms? '))
-return int(m2)
+    return int(m2)
 
 M = m1*m2
 r1 = [1,2,3,4,5,6,7,8,9,10]
