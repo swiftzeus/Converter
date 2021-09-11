@@ -1,14 +1,14 @@
 # An attempt to replicate planetary motion
 import matplotlib.pyplot as plt
-import numpy as np
-a = np.zeros(3)
-print(a)
-a = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
-print(a)
-print(a[a<5])
-divisible_by_2 = a[a%2==0]
-print(divisible_by_2)
-print(a.sum())
+#import numpy as np
+#a = np.zeros(3)
+#print(a)
+#a = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+#print(a)
+#print(a[a<5])
+#divisible_by_2 = a[a%2==0]
+#print(divisible_by_2)
+#print(a.sum())
 # a = np.array([2, 1, 5, 7, 4, 6, 8, 14, 10, 9, 18, 20, 22])
 # plt.plot(a)
 # plt.show()
@@ -31,19 +31,20 @@ print(a.sum())
 
 #plt.show()
 
-G = 6.674 * 10 ** -11
 
 
-while m1.isdigit() == False:
-    m1 = float(input('What is the mass of the first object in kilograms? '))
+#input mass
+def mass_choice1():
+    m1 = 'Word'
+    while m1.isdigit() == False:
+        m1 = input('What is the mass of the first object in kilograms? ')
     return int(m1)
 
-while m2.isdigit() == False:
-    m2 = float(input('What is the mass of the second object in kilograms? '))
+def mass_choice2():
+    m2 = 'Word'
+    while m2.isdigit() == False:
+        m2 = input('What is the mass of the second object in kilograms? ')
     return int(m2)
-
-M = m1*m2
-r1 = [1,2,3,4,5,6,7,8,9,10]
 
 #Calculate gravitational force.
 def Gravitationalforce(m1, m2, r):
@@ -54,6 +55,13 @@ def Gravitationalforce(m1, m2, r):
 def Gravitationalforce1(r):
     Force1 = round(G * M / r**2,2)
     return Force1
+
+m1 = mass_choice1()
+m2 = mass_choice2()
+
+G = 6.674 * 10 ** -11
+M = m1*m2
+r1 = [1,2,3,4,5,6,7,8,9,10]
 
 newforce = map(Gravitationalforce1,r1)
 newforce = list(newforce)
